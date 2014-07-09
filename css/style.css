@@ -32,6 +32,29 @@ body {
   -moz-box-sizing:border-box;
 }
 
+#nav {
+  text-align:center;
+}
+
+#nav li {
+  list-style-type:none;
+  display:inline;
+  margin-right:2em;
+}
+
+.aboutpic {
+  margin:25% 30%;
+}
+
+#nav a {
+  color:#000;
+}
+
+#nav a:hover {
+  color:#2b2b2b;
+  font-size:1.1em;
+}
+
 #footer {
   clear:both;
   margin:1%;
