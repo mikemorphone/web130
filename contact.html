@@ -2,15 +2,15 @@
 <head>
 <title></title>
   <link rel="stylesheet" href="css/style.css" type="text/css"/>
-  
-  <script type="text/javascript">
-    var yourname = prompt('What is your first name?');
-    if ( ( yourname==' ') || ( yourname == null) ) 
-      {
-        yourname="BOB"
-      }
-  
-  </script>
+  <script language="JavaScript">
+ 
+       var yourname= prompt('Please enter your name', ' ');
+
+       if ( (yourname==' ') || (yourname==null) )
+             {
+             yourname="Bob";
+             }
+    </script> 
   
 </head>
 
@@ -28,13 +28,15 @@
   </ul>
   </div>
 <div id="section">
-      <script type="text/javascript">
-             document.write(<h2>'Welcome'+ '' + yourname + '' '!'</h2>);
-             </script>
+     
 
 </div>
 
 <div id="aside">
+ <script language="JavaScript">
+document.write("<h2>Welcome, " + yourname + "! <\/h2>");
+</script>
+  <button>Submit</button>
 
 </div>
 
