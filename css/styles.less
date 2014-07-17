@@ -5,6 +5,16 @@
 @linkColor:#9370db;
 @color:#ff47aa;
 
+.mainSection {
+	border:@standardBorder;
+	padding:@standardPadding;
+}
+
+.specialRound {
+	-webkit-border-radius:@roundedCorners;
+	-moz-border-radius:@roundedCorners;
+	border-radius:@roundedCorners;
+}
 
 h1 {
   color:darken(@color, 20%);
@@ -22,10 +32,6 @@ h4 {
   color:lighten(@color, 10%);
 }
 
-a {
-  color:@linkColor;
-}
-
 
 .borderRadius(@radius:5px) {
   -moz-border-radius:@radius;
@@ -34,9 +40,13 @@ a {
   border-radius:@radius;
 }
 
-header {
+.header {
 .borderRadius;
 border:@standardBorder;
 padding:@sectionPadding;
 background:#fff;
+}
+
+#footer, #aside {
+  .mainSection; 
 }
