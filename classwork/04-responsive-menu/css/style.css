@@ -80,3 +80,32 @@ a {
   z-index:300;
   border-top:1px solid #1d7a62;
 }
+
+.nav li {
+  position:relative;
+}
+
+.nav > li.hover > ul {
+  left:0;
+}
+
+.nav li li.hover ul {
+  left:100%;
+  top:0;
+}
+
+@media screen and (max-width:800px) {
+  .nav > li {
+    float:none;
+  }
+  
+  .nav ul {
+    display:block;
+    width:100%;
+  }
+  
+  .nav > li.hover > ul, .nav li li.hover ul {
+    position:static;
+  }
+  
+}
