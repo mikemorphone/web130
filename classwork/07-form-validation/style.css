@@ -1,0 +1,21 @@
+html {
+  margin:0 auto;
+  width:80%;
+}
+
+.error {
+  color:red;
+}
+
+.hidden {
+  display:none;
+}
+
+.submit {
+  border-radius:10px;
+}
+
+input#zip-code {
+  width:8%;
+  
+}

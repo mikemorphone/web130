@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>html5 template</title>
+    <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <!-- <script src="js/jquery-2.1.1.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById("contact-form").onsubmit = validateContact;
+      }      
+      function validateContact() {
+        var firstName = document.getElementById("first-name").value;
+        var fNameError = document.getElementById("error-first-name");
+        var lastName = document.getElementById("last-name").value;
+        var lNameError = document.getElementById("error-last-name");
+        var phoneNum = document.getElementById("phone-number").value;
+        var pNumError = document.getElementById("error-phone-number");
+        
+        // if they enter nothing in the text box
+        // then show an alert, and dont go to a success page
+        // otherwise go directly to the success page with the alert
+        if (firstName == "") {
+          fNameError.className = "error";
+        } else {
+          fNameError.className = "hidden";
+        }
+        
+        if (lastName == "") {
+          lNameError.className = "error";
+        } else {
+          lNameError.className = "hidden";
+        }
+        
+        if (phoneNum == "") {
+          pNumError.className = "error";
+        } else {
+          pNumError.className = "hidden";
+        }
+        
+        if (firstName != "" && lastName != "" && phoneNum != "") {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="success.html" id="contact-form">
+      <p>
+        <label for="first-name">First Name</label>
+        <input name="first-name" id="first-name" type="text" />
+        <span id="error-first-name" class="error hidden">* Error</span>
+      </p>
+      <p>
+        <label for="last-name">Last Name</label>
+        <input name="last-name" id="last-name" type="text" />
+        <span id="error-last-name" class="error hidden">* Error</span>
+      </p>
+      <p>
+        <label for="phone-number">Phone Number</label>
+        <input type="text" name="phone-number" id="phone-number" />
+        <span id="error-phone-number" class="error hidden">* Error</span>
+      </p>
+      <p>
+        <label for="agree">Agree</label>
+        <input type="checkbox" id="agree" name="agree" required />
+        
+      </p>
+      <input type="submit" name="submit" class="" value="Submit" />
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
