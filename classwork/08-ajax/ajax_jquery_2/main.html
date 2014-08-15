@@ -1,0 +1,55 @@
+<html>
+
+	<head>
+
+
+
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+		<script>
+	    $(document).ready(function() {
+        //$('#doStuff').click(showMessage)
+        $("#number").keyup(showMessage);
+      });        
+        
+      function showMessage() {
+        var myInput = $('#number').val();
+        $("#target").load("poster.php", {data: $(this).val() 
+                                        } );
+      }
+
+		</script>
+
+	</head>
+
+	<body>
+
+        Enter Number:
+        <input type="text" name="number" id="number" />
+        <div id="target"></div>
+        <button id="doStuff">Do Stuff</button>
+
+		
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
